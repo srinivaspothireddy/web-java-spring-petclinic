@@ -7,7 +7,7 @@ addons:
 services:
   - docker
 after_success:
-  - docker build -t myrepo .
+  - docker build -t dockerrepo .
   - pip install --user awscli
   - export PATH=$PATH:$HOME/.local/bin
   - eval $(aws ecr get-login --region us-east-1)
